@@ -3,8 +3,14 @@ import path from "path";
 
 export default class Day {
 
-    year  : number;
-    day   : number;
+    readonly partOneExample       : string = '';
+    readonly partTwoExample       : string = '';
+
+    readonly partOneExampleAnswer : string = '';
+    readonly partTwoExampleAnswer : string = '';
+
+    year                          : number;
+    day                           : number;
 
 
     constructor(year: number, day: number) {
@@ -16,7 +22,13 @@ export default class Day {
         return fs.readFileSync(path.join(__dirname, `../public/${this.year}/${this.day}.txt`), 'utf8');
     }
 
-    partOne(): string { return "Not implemented"; }
 
-    partTwo(): string { return "Not implemented"; }
+    partOne(input: string): string { return "Not implemented"; }
+
+    partTwo(input: string): string { return "Not implemented"; }
+
+    test(): boolean {
+        return this.partOne(this.partOneExample) === this.partOneExampleAnswer &&
+               this.partTwo(this.partTwoExample) === this.partTwoExampleAnswer;
+    }
 }
