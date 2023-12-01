@@ -1,6 +1,4 @@
-# aoc2023
-
-## Advent of Code 2023 | TypeScript Answers
+# Advent of Code | TypeScript Solutions
 
 ### How to run
 
