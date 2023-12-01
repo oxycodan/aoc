@@ -1,18 +1,13 @@
-import Day from "../day";
+import Day from "../../day";
 
-import path from 'path';
-import fs   from 'fs';
+export class DayOne extends Day {
 
-const input = fs.readFileSync(path.join(__dirname, '../../public/dayOne.txt'), 'utf8');
-
-export class CayOne extends Day {
-
-    constructor() { super(1, input); }
+    constructor() { super(2023, 1); }
 
     partOne(): string {
         let sum = 0; let combos: string[] = [];
 
-        for (let line of input.split('\n')) {
+        for (let line of this.input.split('\n')) {
             let chars: string[] = line.replace(/[^0-9]/g, '').split('');
             combos.push(chars[0] + chars[chars.length - 1]);
         }
@@ -37,7 +32,7 @@ export class CayOne extends Day {
 
         let sum = 0; let combos: string[] = [];
 
-        for (let line of input.split('\n')) {
+        for (let line of this.input.split('\n')) {
 
             const first = line.match(/\d|one|two|three|four|five|six|seven|eight|nine/)?.[0]
             const last = line.match(/.*(\d|one|two|three|four|five|six|seven|eight|nine)/)?.[1];
@@ -53,4 +48,4 @@ export class CayOne extends Day {
 
 }
 
-export default new CayOne;
+export default new DayOne;

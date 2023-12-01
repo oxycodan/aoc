@@ -11,11 +11,11 @@ npm start
 ```
 
 ### User Input
-`./public/` contains user input such as for day one: `./public/dayOne.txt`.
+`./public/<year>/` contains user input such as for 2023 day one: `./public/2023/dayOne.txt`.
 
 ### Example Output
 ```
-> aoc2023@1.0.0 start 
+> aoc@1.1.0 start 
 > node dist/index.js
 
 Advent of Code 2023 - Day 1
@@ -24,3 +24,26 @@ Advent of Code 2023 - Day 1
 55291                                  
 =======================================
 ```
+
+### Configuartion
+`./src/inedx.ts` contains a config object that can be used to filter which years, days, and parts are displayed.
+```typescript
+const config = {
+    year : 0,
+    day  : 0,
+    part : 0
+}; // this will display every year, day, and part
+```
+
+If a config value is set to `0` or is invalid, filtering will be ignored.  
+
+```typescript
+const config = {
+    year : 2023,
+    day  : 1,
+    part : 1
+}; // this will display only 2023 day 1 part 1
+```
+
+
+
