@@ -12,6 +12,7 @@
         "esModuleInterop": true,
         "paths": {
             "@impl/*": ["./src/impl/*"],
+            "@src/*": ["./src/*"],
         },
         "declaration": true
     },

@@ -1,4 +1,4 @@
-import Day from "../../day";
+import Day from "@src/day";
 
 export class DayOne extends Day {
 

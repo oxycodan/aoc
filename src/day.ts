@@ -1,5 +1,5 @@
-import fs from "fs";
 import path from "path";
+import fs   from "fs";
 
 export default class Day {
 
@@ -12,7 +12,6 @@ export default class Day {
     year                          : number;
     day                           : number;
 
-
     constructor(year: number, day: number) {
         this.year  = year;
         this.day   = day;
@@ -21,7 +20,6 @@ export default class Day {
     get input(): string {
         return fs.readFileSync(path.join(__dirname, `../public/${this.year}/${this.day}.txt`), 'utf8');
     }
-
 
     partOne(input: string): string { return "Not implemented"; }
 
