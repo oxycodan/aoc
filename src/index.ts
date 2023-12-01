@@ -12,7 +12,7 @@ const isValidDay  = (day: number)  => day  >= START_DAY  && day  <= END_DAY;
 const isValidPart = (part: number) => part === 1 || part === 2;
 
 const config = {
-    year : 2023,
+    year : 2015,
     day  : 0,
     part : 0
 };
@@ -52,7 +52,7 @@ const main = async () => {
 
     solutions.forEach(solution => {
         console.log(`=====================`);
-        console.log(`Year: ${solution.default.year} Day: ${solution.default.day} Test: ${solution.default.test() ? 'Passed' : 'Failed'}`);
+        console.log(`Year: ${solution.default.year} | Day: ${solution.default.day} | Test: ${solution.default.test() ? 'Passed' : 'Failed'}`);
 
         if (config.part === 1 || !isValidPart(config.part)) {
             console.log(`Part One: ${solution.default.partOne(solution.default.input)}`);

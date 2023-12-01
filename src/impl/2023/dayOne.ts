@@ -2,11 +2,11 @@ import Day from "../../day";
 
 export class DayOne extends Day {
 
-    readonly partOneExample: string = '1abc2\n' + 'pqr3stu8vwx\n' + 'a1b2c3d4e5f\n' + 'treb7uchet';
-    readonly partTwoExample: string = 'two1nine\n' + 'eightwothree\n' + 'abcone2threexyz\n' + 'xtwone3four\n' + '4nineeightseven2\n' + 'zoneight234\n' + '7pqrstsixteen';
+    readonly partOneExample       : string = '1abc2\n' + 'pqr3stu8vwx\n' + 'a1b2c3d4e5f\n' + 'treb7uchet';
+    readonly partTwoExample       : string = 'two1nine\n' + 'eightwothree\n' + 'abcone2threexyz\n' + 'xtwone3four\n' + '4nineeightseven2\n' + 'zoneight234\n' + '7pqrstsixteen';
 
-    readonly partOneExampleAnswer: string = '142';
-    readonly partTwoExampleAnswer: string = '281';
+    readonly partOneExampleAnswer : string = '142';
+    readonly partTwoExampleAnswer : string = '281';
 
     constructor() { super(2023, 1); }
 
