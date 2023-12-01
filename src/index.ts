@@ -1,18 +1,14 @@
 import RequireAll from 'require-all';
 import path       from "path";
 
-const START_YEAR = 2015;
-const END_YEAR   = 2023;
+const YEAR_RANGE = [2015, 2020];
+const DAY_RANGE  = [1, 25];
 
-const START_DAY   = 1;
-const END_DAY     = 25;
-
-const isValidYear = (year: number) => year >= START_YEAR && year <= END_YEAR;
-const isValidDay  = (day: number)  => day  >= START_DAY  && day  <= END_DAY;
+const isInRange = (range: number[], value: number): boolean => value >= range[0] && value <= range[1];
 
 const config = {
     year : 2015,
-    day  : 3,
+    day  : 1,
 };
 
 const main = async () => {
@@ -20,7 +16,7 @@ const main = async () => {
     // parse all solution classes
     const days = [];
 
-    for (let year = START_YEAR; year <= END_YEAR; year++) {
+    for (let year = YEAR_RANGE[0]; year <= YEAR_RANGE[1]; year++) {
 
         const yearDays = RequireAll({
             dirname: path.join(__dirname, `../dist/impl/${year}/`),
@@ -36,9 +32,9 @@ const main = async () => {
 
     solutions = days.filter(day => {
 
-        if (!isValidYear(config.year)) { return true; }
+        if (!isInRange(DAY_RANGE, config.day)) { return true; }
 
-        if (!isValidDay(config.day)) { return day.default.year === config.year; }
+        if (!isInRange(DAY_RANGE, config.day)) { return day.default.year === config.year; }
 
         return day.default.year === config.year && day.default.day === config.day;
     });
