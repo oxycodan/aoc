@@ -55,11 +55,11 @@ const main = async () => {
         console.log(`Year: ${solution.default.year} | Day: ${solution.default.day} | Test: ${solution.default.test() ? 'Passed' : 'Failed'}`);
 
         if (config.part === 1 || !isValidPart(config.part)) {
-            console.log(`Part One: ${solution.default.partOne(solution.default.input)}`);
+            console.log(`Part One Solution: ${solution.default.partOne(solution.default.input)}`);
         }
 
         if (config.part === 2 || !isValidPart(config.part)) {
-            console.log(`Part Two: ${solution.default.partTwo(solution.default.input)}`);
+            console.log(`Part Two Solution: ${solution.default.partTwo(solution.default.input)}`);
         }
 
         console.log();

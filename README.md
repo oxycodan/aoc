@@ -12,15 +12,14 @@ npm start
 `./public/<year>/<day>.txt` contains user input such as for 2023 day one: `./public/2023/1.txt`.
 
 ### Example Output
-```
-> aoc@1.1.0 start 
+```bash
+> aoc@1.1.0 start            
 > node dist/index.js
 
-Advent of Code 2023 - Day 1
-=======================================
-55607                                  
-55291                                  
-=======================================
+=====================
+Year: 2015 | Day: 1 | Test: Passed
+Part One Solution: 138            
+Part Two Solution: 1771   
 ```
 
 ### Configuartion
