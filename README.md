@@ -9,7 +9,7 @@ npm start
 ```
 
 ### User Input
-`./public/<year>/` contains user input such as for 2023 day one: `./public/2023/dayOne.txt`.
+`./public/<year>/<day>.txt` contains user input such as for 2023 day one: `./public/2023/1.txt`.
 
 ### Example Output
 ```
