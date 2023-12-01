@@ -13,9 +13,11 @@ export class DayTwo extends Day {
     constructor() { super(2015, 2); }
 
     partOne(input: string): string {
+
         let total = 0;
 
         for (let line of input.split('\n')) {
+
             const [l, w, h] = line.split('x').map(Number);
             total += area(l, w, h) + Math.min(l*w, w*h, h*l);
         }
@@ -24,9 +26,11 @@ export class DayTwo extends Day {
     }
 
     partTwo(input: string): string {
+
         let total = 0;
 
         for (let line of input.split('\n')) {
+
             const [l, w, h] = line.split('x').map(Number);
 
             const perimeters = [2*l + 2*w, 2*w + 2*h, 2*h + 2*l];

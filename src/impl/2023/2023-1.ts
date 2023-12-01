@@ -1,5 +1,17 @@
 import Day from "@src/day";
 
+const digits: {[index: string]: any} = {
+    one   : '1',
+    two   : '2',
+    three : '3',
+    four  : '4',
+    five  : '5',
+    six   : '6',
+    seven : '7',
+    eight : '8',
+    nine  : '9',
+}
+
 export class DayOne extends Day {
 
     readonly partOneExample       : string = '1abc2\n' + 'pqr3stu8vwx\n' + 'a1b2c3d4e5f\n' + 'treb7uchet';
@@ -11,9 +23,11 @@ export class DayOne extends Day {
     constructor() { super(2023, 1); }
 
     partOne(input: string): string {
+
         let sum = 0; let combos: string[] = [];
 
         for (let line of input.split('\n')) {
+
             let chars: string[] = line.replace(/[^0-9]/g, '').split('');
             combos.push(chars[0] + chars[chars.length - 1]);
         }
@@ -23,18 +37,6 @@ export class DayOne extends Day {
     }
 
     partTwo(input: string): string {
-
-        const digits: {[index: string]: any} = {
-            one   : '1',
-            two   : '2',
-            three : '3',
-            four  : '4',
-            five  : '5',
-            six   : '6',
-            seven : '7',
-            eight : '8',
-            nine  : '9',
-        }
 
         let sum = 0; let combos: string[] = [];
 
