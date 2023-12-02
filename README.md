@@ -23,13 +23,12 @@ Part Two Solution: 1771
 ```
 
 ### Configuartion
-`./src/inedx.ts` contains a config object that can be used to filter which years, days, and parts are displayed.
+`./src/inedx.ts` contains a config object that can be used to filter which years, days are displayed.
 ```typescript
 const config = {
     year : 0,
     day  : 0,
-    part : 0
-}; // this will display every year, day, and part
+}; // this will display every year, every day
 ```
 
 If a config value is set to `0` or is invalid, filtering will be ignored.  
@@ -38,8 +37,7 @@ If a config value is set to `0` or is invalid, filtering will be ignored.
 const config = {
     year : 2023,
     day  : 1,
-    part : 1
-}; // this will display only 2023 day 1 part 1
+}; // this will display only 2023 day 1 
 ```
 
 
