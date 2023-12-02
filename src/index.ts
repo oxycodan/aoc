@@ -1,14 +1,14 @@
 import RequireAll from 'require-all';
 import path       from "path";
 
-const YEAR_RANGE = [2015, 2020];
+const YEAR_RANGE = [2015, 2023];
 const DAY_RANGE  = [1, 25];
 
 const isInRange = (range: number[], value: number): boolean => value >= range[0] && value <= range[1];
 
 const config = {
-    year : 2015,
-    day  : 1,
+    year : 2023,
+    day  : 0,
 };
 
 const main = async () => {
@@ -28,15 +28,12 @@ const main = async () => {
     }
 
     // filter solutions based on config
+    // out of range = include all
     let solutions = [];
 
     solutions = days.filter(day => {
-
-        if (!isInRange(DAY_RANGE, config.day)) { return true; }
-
-        if (!isInRange(DAY_RANGE, config.day)) { return day.default.year === config.year; }
-
-        return day.default.year === config.year && day.default.day === config.day;
+        if (config.year !== 0 && config.year !== day.default.year) return false;
+        return !(config.day !== 0 && config.day !== day.default.day);
     });
 
     // run solutions and print results
