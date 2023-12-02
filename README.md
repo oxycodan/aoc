@@ -23,7 +23,7 @@ Part Two Solution: 1771
 ```
 
 ### Configuartion
-`./src/inedx.ts` contains a config object that can be used to filter which years, days are displayed.
+`./src/inedx.ts` contains a config object that can be used to filter which years and days are displayed.
 ```typescript
 const config = {
     year : 0,
